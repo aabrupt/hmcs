@@ -1,0 +1,4 @@
+/target
+/.direnv
+/.sqlx
+/primary.db

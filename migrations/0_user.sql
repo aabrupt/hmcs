@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  capabilities TEXT NOT NULL,
+  username TEXT NOT NULL,
+  password TEXT NOT NULL CHECK (LENGTH(password) >= 64),
+  author_tag TEXT NOT NULL
+);
+
+---
+
+CREATE TABLE IF NOT EXISTS session (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  uid INTEGER NOT NULL,
+  timeout INTEGER NOT NULL DEFAULT (unixepoch() + 2 * 3600),
+  ip TEXT NOT NULL CHECK (LENGTH(ip) >= 8 || LENGTH(ip) <= 16),
+  browser TEXT NOT NULL,
+  FOREIGN KEY (uid) REFERENCES user(id)
+);

@@ -1,0 +1,16 @@
+[package]
+name = "simple_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+askama = "0.12.1"
+askama_axum = "0.4.0"
+axum = { version = "0.8.1", features = ["macros"] }
+clap = { version = "4.5.28", features = ["cargo", "debug", "derive", "env"] }
+clap_derive = { version = "4.5.28", features = ["debug"] }
+serde = { version = "1.0.217", features = ["derive"] }
+sqlx = { version = "0.8.3", features = ["macros", "runtime-tokio", "sqlite"] }
+thiserror = "2.0.11"
+tokio = { version = "1.43.0", features = ["full"] }
+tracing-subscriber = { version = "0.3.19", features = ["tracing", "time", "chrono", "local-time"] }

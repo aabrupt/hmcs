@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.4"
+    integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav>This is a nav</nav>
+  <main>
+    {% block content %}<p>Placeholder content</p>{% endblock %}
+  </main>
+  <footer>This is a footer</footer>
+</body>
+
+</html>
